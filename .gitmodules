@@ -1,0 +1,9 @@
+[submodule "modules/voyage"]
+	path = modules/voyage
+	url = https://github.com/plasteek/voyage
+[submodule "modules/finite-state-machine"]
+	path = modules/finite-state-machine
+	url = https://github.com/plasteek/node-based-finite-state-machine
+[submodule "modules/encounter-system"]
+	path = modules/encounter-system
+	url = https://github.com/plasteek/zenless-zone-zero-ish-encounter-system
