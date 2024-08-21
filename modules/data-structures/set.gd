@@ -3,6 +3,9 @@ extends RefCounted
 
 var dict = {}
 
+func _init(initial := []):
+  add_array(initial)
+
 func add(item):
   if has(item):
    return
@@ -55,8 +58,3 @@ static func unique(arr: Array):
   var new_set = Set.new()
   new_set.add_array(arr)
   return new_set.values()
-
-static func from_array(arr: Array):
-  var new_set = Set.new()
-  new_set.add_array(arr)
-  return new_set
