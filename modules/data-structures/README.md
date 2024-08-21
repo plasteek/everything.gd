@@ -7,6 +7,31 @@
 
 This category contains commonly used data structures that are either a wrapper class (often to dictionary) or just non implemented in Godot.
 
+# Priority Queue / Binary Heap
+
+A data structure that ensures the first element is always the largest (max-heap) or the smallest (min-heap) item. This implementation uses a non-recursive variant for max efficiency
+
+```gdscript
+var pq = PriorityQueue.new(
+    # Initial heap elements
+    [3, 2, 1, 1, 2, 3, 199, 1, 2000],
+    # MAX_HEAP = largest item is at the top (default)
+    # MIN_HEAP = smallest item is at the top
+    # You may also specify a custom compare function that takes 2
+    # integer as params, a and b
+    Priority.MAX_HEAP,
+    # "weight" function, if your heap is comprised on non-integers
+    # such as class, this function is used to extract the "value"
+    # or priority you want to assign to the class
+    func (a): a
+)
+
+pq.insert(1000)
+var popped = pq.pop()
+var peeked = pq.peek() # Does not remove
+pq.size()
+```
+
 # Set
 
 A collection of unique items (an array without duplicates).
